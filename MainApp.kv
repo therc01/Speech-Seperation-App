@@ -1,0 +1,44 @@
+Gridlayout:
+
+
+
+<MainWG>:
+
+    Button:
+        text: 'Start (for mp3 files)'
+        size: (150, 100)
+        size_hint: None, None
+        
+        #pos_hint: { "x" : 0 , "top" : 1 }
+        pos: ('850dp','400dp')
+        background_color: 0,1,0,1
+        on_press: root.sttmp3(app.root.ids.filechooser.selection)
+        
+
+    Button:
+        text: 'Start (for wav files)'
+        size: (150, 100)
+        size_hint: None, None
+        pos: ('850dp','280dp')
+        background_color: 0,1,0,1
+        on_press: root.sttwav(app.root.ids.filechooser.selection)
+
+    Label:
+        text: 'Select file from file explorer in left'
+        pos: ('900dp','500dp')
+        #pos_hint: { "right" : 0.7 , "y" : 0.7 }
+        size_hint: None, None
+    Label:
+        id: label_update
+        text: 'Please wait....\nAfter clicking start button'
+        pos: ('870dp','200dp')
+
+<Gridlayout>:
+    cols: 2
+    id: my_widget
+
+    FileChooserIconView:
+        id: filechooser
+        on_selection: my_widget.selected(filechooser.selection)
+
+    MainWG   

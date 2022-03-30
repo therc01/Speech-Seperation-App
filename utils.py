@@ -87,24 +87,3 @@ class Main():
                             finalOutput.append(mydictTemp)
         return finalOutput
                 
-#finalOutput = speaker_seperation.seperation(file_path_)
-'''
-v = []
-for z in finalOutput:
-  if 'newline' not in z.keys() :
-    v.append(z['speaker']) #if 
-num_speakers = set(v)
-
-for i in num_speakers:
-    z = i
-    s = ''
-    for x in finalOutput:
-        if 'newline' in x.keys():
-            s += '\n'
-        elif x['speaker'] == z:
-            s += x['transcript'] + ' '
-  
-    print('Speaker '+ str(i))
-    print(s)
-
-'''
